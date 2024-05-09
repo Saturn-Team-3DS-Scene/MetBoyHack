@@ -18,6 +18,9 @@
 - Listo ✅
 ### Si ya tienes el hack instalado
 - ⛔ NO USES ESTE SCRIPT
+## ¿Por qué no hay una relase del script?
+Este script es parte del pack de MSET9, que puedes encontrar en 
+nuestro GitHub. No debe ser usado por sí solo.
 
 ## Actualizado a luma v13.1 ⭐
 
