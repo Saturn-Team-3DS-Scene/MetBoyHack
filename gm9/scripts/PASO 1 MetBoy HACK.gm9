@@ -1,0 +1,29 @@
+#set PREVIEW_MODE 0:/gm9/imagenes/1.png
+# Script "MetBoyHack"
+# Instala Boot9 y Actualiza el Sistema 
+# Autores Script Original: Lopez Tutoriales, Nintricks, Kelonio 3Ds
+# Saturn Team 3ds SCENE: Tristanabs, Angelpro09_Xd
+
+################# Methax Retro Paso 1 #################
+ask "Este Script Instalara Boot9 \nContinuar?"
+set ERRORMSG "Cancelado por el usuario."
+
+set ERRORMSG "Cancelado por el usuario."
+allow -a S:
+
+################# Comprobando Archivos ################# 
+set ERRORMSG "ARCHIVOS NECESARIOS NO ENCONTRADOS. \n \nVUELVE A DESCARGAR O USA OTRA TARJETA SD "
+find 0:/gm9/Act3dsREX/boot9stra*.firm B9S
+
+###################### Instalando Boot9 #####################
+set ERRORMSG "No se pudo inyectar boot9strap!\n \nUsar SafeB9SInstaller al terminar."
+cp -w -o -n $[B9S] S:/firm0.bin
+cp -w -o -n $[B9S] S:/firm1.bin
+
+###################### Instalando Luma y GodMode9 #####################
+cp -w -o -s 0:/luma 1:/rw/luma	                                                            # Configuracion de Luma y payload de GodMode9 en CTRNAND
+mv -w -o -s 0:/gm9/Act3dsREX/GodMode9.firm 1:/rw/luma/payloads/GodMode9.firm                # Payload de GodMode9 en CTRNAND
+
+
+echo "Recuerda ejecutar UPT3DS \n \nVisita la web de Hbcentral: go.range-near.online/hbcentral"
+reboot
